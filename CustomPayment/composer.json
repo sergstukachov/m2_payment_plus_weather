@@ -1,0 +1,21 @@
+{
+    "name": "skillup/module-custompayment",
+    "description": "custom payment method plus  the shipping weather",
+    "type": "magento2-module",
+    "authors": [
+        {
+            "name": "Serg Stukachov",
+            "email": "sergstukachov@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "SkillUp\\CustomPayment\\": ""
+        }
+    }
+}
