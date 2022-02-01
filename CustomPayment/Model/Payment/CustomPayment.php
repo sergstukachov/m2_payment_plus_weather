@@ -9,9 +9,9 @@ declare(strict_types=1);
 namespace SkillUp\CustomPayment\Model\Payment;
 
 use Magento\Quote\Api\Data\CartInterface;
-use Magento\Payment\Model\Method\Adapter;
+use Magento\Payment\Model\Method\AbstractMethod;
 
-class CustomPayment extends Adapter
+class CustomPayment extends AbstractMethod
 {
     /**
      * @var string
@@ -23,11 +23,9 @@ class CustomPayment extends Adapter
      */
     protected $_isOffline = true;
 
-    /**
-     * @param CartInterface|null $quote
-     * @return array|bool|mixed|null
-     */
-    public function isAvailable(CartInterface $quote = null)
+    public function isAvailable(
+        CartInterface $quote = null
+    )
     {
         return parent::isAvailable($quote);
     }
